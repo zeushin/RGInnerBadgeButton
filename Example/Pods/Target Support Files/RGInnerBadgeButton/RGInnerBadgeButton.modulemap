@@ -1,0 +1,6 @@
+framework module RGInnerBadgeButton {
+  umbrella header "RGInnerBadgeButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
