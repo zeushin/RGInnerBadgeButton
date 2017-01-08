@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/RGInnerBadgeButton'
+  s.homepage         = 'https://github.com/zeushin/RGInnerBadgeButton'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Beomcheol Shin' => 'beomcheol.shin@rgpkorea.co.kr' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/RGInnerBadgeButton.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Masher Shin' => 'zeushin@gmail.com' }
+  s.source           = { :git => 'https://github.com/zeushin/RGInnerBadgeButton.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/masher_s'
 
   s.ios.deployment_target = '8.0'
 

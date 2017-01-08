@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## RGInnerBadgeButton
 
-Copyright (c) 2017 Beomcheol Shin <beomcheol.shin@rgpkorea.co.kr>
+Copyright (c) 2017 Masher Shin <zeushin@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

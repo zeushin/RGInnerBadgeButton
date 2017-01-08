@@ -1,6 +1,6 @@
 # RGInnerBadgeButton
 
-[![CI Status](http://img.shields.io/travis/Beomcheol Shin/RGInnerBadgeButton.svg?style=flat)](https://travis-ci.org/Beomcheol Shin/RGInnerBadgeButton)
+[![CI Status](http://img.shields.io/travis/zeushin/RGInnerBadgeButton.svg?style=flat)](https://travis-ci.org/zeushin/RGInnerBadgeButton)
 [![Version](https://img.shields.io/cocoapods/v/RGInnerBadgeButton.svg?style=flat)](http://cocoapods.org/pods/RGInnerBadgeButton)
 [![License](https://img.shields.io/cocoapods/l/RGInnerBadgeButton.svg?style=flat)](http://cocoapods.org/pods/RGInnerBadgeButton)
 [![Platform](https://img.shields.io/cocoapods/p/RGInnerBadgeButton.svg?style=flat)](http://cocoapods.org/pods/RGInnerBadgeButton)
@@ -22,7 +22,7 @@ pod "RGInnerBadgeButton"
 
 ## Author
 
-Beomcheol Shin, beomcheol.shin@rgpkorea.co.kr
+Masher Shin, zeushin@gmail.com
 
 ## License
 
