@@ -4,11 +4,15 @@
 
 osx_image: xcode8.2
 language: objective-c
+
+env:
+  - SDK="iphoneos10.2"
+
 # cache: cocoapods
 # podfile: Example/Podfile
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- set -o pipefail && xcodebuild test -workspace Example/RGInnerBadgeButton.xcworkspace -scheme RGInnerBadgeButton-Example -destination 'platform=ios Simulator,name=iPhone SE' ONLY_ACTIVE_ARCH=NO | xcpretty
+- xcodebuild clean -workspace Example/RGInnerBadgeButton.xcworkspace -scheme RGInnerBadgeButton-Example
 - pod lib lint
