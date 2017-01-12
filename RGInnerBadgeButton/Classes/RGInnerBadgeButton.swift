@@ -71,6 +71,11 @@ class RGInnerBadgeButton: UIButton {
         return UIEdgeInsets(top: countInsetTop, left: countInsetLeft, bottom: countInsetBottom, right: countInsetRight)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setNeedsDisplay()
+    }
+    
     override func draw(_ rect: CGRect) {
         if let titleLabel = titleLabel {
             let countFont = UIFont(name: titleLabel.font.fontName,
@@ -79,7 +84,7 @@ class RGInnerBadgeButton: UIButton {
             var countStringAttributes: [String: Any] = [:]
             countStringAttributes[NSFontAttributeName] = countFont
             if let textColor = titleLabel.textColor {
-                countStringAttributes[NSForegroundColorAttributeName] = textColor
+                countStringAttributes[NSForegroundColorAttributeName] = textColor.withAlphaComponent(titleLabel.alpha)
             } else {
                 countStringAttributes[NSForegroundColorAttributeName] = UIColor.clear
             }
@@ -90,7 +95,7 @@ class RGInnerBadgeButton: UIButton {
             let inset = (badgeSize.width + margin) / 2
             titleEdgeInsets = UIEdgeInsetsMake(0, -inset, 0, inset)
             
-            let countPoint = CGPoint(x: titleLabel.frame.maxX + margin + countEdgeInsets.left - inset,
+            let countPoint = CGPoint(x: titleLabel.frame.maxX + margin + countEdgeInsets.left - inset + titleEdgeInsets.right,
                                      y: titleLabel.frame.midY - (countString.size().height / 2))
             
             countString.draw(at: countPoint)
@@ -102,7 +107,7 @@ class RGInnerBadgeButton: UIButton {
             
             let badgePath = UIBezierPath(rect: badgeRect)
             badgePath.lineWidth = lineWidth
-            titleLabel.textColor.set()
+            titleLabel.textColor.withAlphaComponent(titleLabel.alpha).set()
             badgePath.stroke()
         }
     }
