@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Inner Badge Button with IBDesignable.
+Inner Badge Button with IBDesignable. Enjoy it!
                        DESC
 
   s.homepage         = 'https://github.com/zeushin/RGInnerBadgeButton'
