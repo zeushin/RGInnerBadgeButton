@@ -9,7 +9,13 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
+## Usage
+
+<img src="https://raw.githubusercontent.com/beomcheol/RGInnerBadgeButton/0.1.0/Screenshots/Screen%20Shot%202017-01-12%20at%2010.46.04%20AM.png">
+
+## Screenshots
+
+<img src="https://raw.githubusercontent.com/beomcheol/RGInnerBadgeButton/0.1.0/Screenshots/Simulator%20Screen%20Shot%2012%20Jan%202017%2C%2010.47.01%20AM.png">
 
 ## Installation
 
