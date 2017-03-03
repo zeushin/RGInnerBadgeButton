@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-@objc class RGInnerBadgeButton: UIButton {
+@objc open class RGInnerBadgeButton: UIButton {
     
     @IBInspectable
     var margin: CGFloat = 10 {
@@ -71,12 +71,12 @@ import UIKit
         return UIEdgeInsets(top: countInsetTop, left: countInsetLeft, bottom: countInsetBottom, right: countInsetRight)
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setNeedsDisplay()
     }
     
-    override func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         guard let titleLabel = titleLabel else {
             return
         }
