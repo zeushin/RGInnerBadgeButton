@@ -14,5 +14,5 @@ env:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
 script:
-- xcodebuild clean -workspace Example/RGInnerBadgeButton.xcworkspace -scheme RGInnerBadgeButton-Example
+- xcodebuild clean test build -workspace Example/RGInnerBadgeButton.xcworkspace -scheme RGInnerBadgeButton-Example -destination 'platform=iOS Simulator,name=iPhone SE,OS=10.1' | xcpretty
 - pod lib lint
