@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class RGInnerBadgeButton: UIButton {
+@objc class RGInnerBadgeButton: UIButton {
     
     @IBInspectable
     var margin: CGFloat = 10 {
@@ -77,7 +77,12 @@ class RGInnerBadgeButton: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        if let titleLabel = titleLabel {
+        guard let titleLabel = titleLabel else {
+            return
+        }
+        if badgeNumber == 0 {
+            super.draw(rect)
+        } else {
             let countFont = UIFont(name: titleLabel.font.fontName,
                                    size: titleLabel.font.pointSize - countDiffSize)!
             
