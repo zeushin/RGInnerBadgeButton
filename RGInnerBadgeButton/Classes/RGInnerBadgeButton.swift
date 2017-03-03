@@ -12,56 +12,56 @@ import UIKit
 @objc open class RGInnerBadgeButton: UIButton {
     
     @IBInspectable
-    var margin: CGFloat = 10 {
+    open var margin: CGFloat = 10 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countDiffSize: CGFloat = 4 {
+    open var countDiffSize: CGFloat = 4 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countInsetTop: CGFloat = 0 {
+    open var countInsetTop: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countInsetLeft: CGFloat = 0 {
+    open var countInsetLeft: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countInsetBottom: CGFloat = 0 {
+    open var countInsetBottom: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countInsetRight: CGFloat = 0 {
+    open var countInsetRight: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var lineWidth: CGFloat = 1 / UIScreen.main.nativeScale {
+    open var lineWidth: CGFloat = 1 / UIScreen.main.nativeScale {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var badgeNumber: Int = 0 {
+    open var badgeNumber: Int = 0 {
         didSet {
             setNeedsDisplay()
         }
