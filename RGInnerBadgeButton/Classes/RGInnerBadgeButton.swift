@@ -9,59 +9,59 @@
 import UIKit
 
 @IBDesignable
-@objc class RGInnerBadgeButton: UIButton {
+@objc open class RGInnerBadgeButton: UIButton {
     
     @IBInspectable
-    var margin: CGFloat = 10 {
+    open var margin: CGFloat = 10 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countDiffSize: CGFloat = 4 {
+    open var countDiffSize: CGFloat = 4 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countInsetTop: CGFloat = 0 {
+    open var countInsetTop: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countInsetLeft: CGFloat = 0 {
+    open var countInsetLeft: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countInsetBottom: CGFloat = 0 {
+    open var countInsetBottom: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var countInsetRight: CGFloat = 0 {
+    open var countInsetRight: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var lineWidth: CGFloat = 1 / UIScreen.main.nativeScale {
+    open var lineWidth: CGFloat = 1 / UIScreen.main.nativeScale {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var badgeNumber: Int = 0 {
+    open var badgeNumber: Int = 0 {
         didSet {
             setNeedsDisplay()
         }
@@ -71,12 +71,12 @@ import UIKit
         return UIEdgeInsets(top: countInsetTop, left: countInsetLeft, bottom: countInsetBottom, right: countInsetRight)
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setNeedsDisplay()
     }
     
-    override func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         guard let titleLabel = titleLabel else {
             return
         }
