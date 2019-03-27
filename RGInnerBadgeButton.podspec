@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RGInnerBadgeButton'
-  s.version          = '0.1.5'
+  s.version          = '0.2.0'
   s.summary          = 'Inner Badge Button with IBDesignable.'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Inner Badge Button with IBDesignable. Enjoy it!
   s.source           = { :git => 'https://github.com/zeushin/RGInnerBadgeButton.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/masher_s'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'RGInnerBadgeButton/Classes/**/*'
   
