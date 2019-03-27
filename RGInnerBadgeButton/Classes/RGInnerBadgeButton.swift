@@ -87,18 +87,18 @@ import UIKit
                                    size: titleLabel.font.pointSize - countDiffSize)!
             
             var countStringAttributes: [String: Any] = [:]
-            countStringAttributes[NSFontAttributeName] = countFont
+            countStringAttributes[convertFromNSAttributedStringKey(NSAttributedString.Key.font)] = countFont
             if let textColor = titleLabel.textColor {
-                countStringAttributes[NSForegroundColorAttributeName] = textColor.withAlphaComponent(titleLabel.alpha)
+                countStringAttributes[convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor)] = textColor.withAlphaComponent(titleLabel.alpha)
             } else {
-                countStringAttributes[NSForegroundColorAttributeName] = UIColor.clear
+                countStringAttributes[convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor)] = UIColor.clear
             }
-            let countString = NSAttributedString(string: String(badgeNumber), attributes: countStringAttributes)
+            let countString = NSAttributedString(string: String(badgeNumber), attributes: convertToOptionalNSAttributedStringKeyDictionary(countStringAttributes))
             let badgeSize = CGSize(width: countString.size().width + countEdgeInsets.left + countEdgeInsets.right,
                                    height: countString.size().height + countEdgeInsets.top + countEdgeInsets.bottom)
             
             let inset = (badgeSize.width + margin) / 2
-            titleEdgeInsets = UIEdgeInsetsMake(0, -inset, 0, inset)
+            titleEdgeInsets = UIEdgeInsets.init(top: 0, left: -inset, bottom: 0, right: inset)
             
             let countPoint = CGPoint(x: titleLabel.frame.maxX + margin + countEdgeInsets.left - inset + titleEdgeInsets.right,
                                      y: titleLabel.frame.midY - (countString.size().height / 2))
@@ -116,4 +116,15 @@ import UIKit
             badgePath.stroke()
         }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

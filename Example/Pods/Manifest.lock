@@ -4,34 +4,47 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - Nimble (5.1.1)
-  - Nimble-Snapshots (4.4.0):
-    - Nimble-Snapshots/Core (= 4.4.0)
-  - Nimble-Snapshots/Core (4.4.0):
-    - FBSnapshotTestCase (~> 2.0)
-    - Nimble
-    - Quick
-  - Quick (1.0.0)
-  - RGInnerBadgeButton (0.1.0)
+  - iOSSnapshotTestCase (5.0.2):
+    - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
+  - iOSSnapshotTestCase/Core (5.0.2)
+  - iOSSnapshotTestCase/SwiftSupport (5.0.2):
+    - iOSSnapshotTestCase/Core
+  - Nimble (7.3.4)
+  - Nimble-Snapshots (6.9.1):
+    - Nimble-Snapshots/Core (= 6.9.1)
+  - Nimble-Snapshots/Core (6.9.1):
+    - iOSSnapshotTestCase (~> 5.0)
+    - Nimble (~> 7.0)
+  - Quick (2.0.0)
+  - RGInnerBadgeButton (0.1.5)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
-  - Nimble (~> 5.1.1)
+  - Nimble
   - Nimble-Snapshots
-  - Quick (~> 1.0.0)
+  - Quick
   - RGInnerBadgeButton (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
+    - iOSSnapshotTestCase
+    - Nimble
+    - Nimble-Snapshots
+    - Quick
 
 EXTERNAL SOURCES:
   RGInnerBadgeButton:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
-  Nimble-Snapshots: e743439f26c2fa99d8f7e0d7c01c99bcb40aa6f2
-  Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
-  RGInnerBadgeButton: 7cb62483e8de45de74433a6da6174b05480d9538
+  iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
+  Quick: ce1276c7c27ba2da3cb2fd0cde053c3648b3b22d
+  RGInnerBadgeButton: 252ad4a2ef1226f13bd80dc7320713e127b3fbce
 
-PODFILE CHECKSUM: 0034386ddf2eaf67d1f22205834e0352b820af51
+PODFILE CHECKSUM: b3050a20f41bbe50c53ec20e2ae55843dd614b76
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.5.3
